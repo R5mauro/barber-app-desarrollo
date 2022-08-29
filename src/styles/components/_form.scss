@@ -1,0 +1,18 @@
+.campo {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+
+    label {
+        flex-basis: 20%;
+    }
+
+    input {
+        flex: 1;
+        padding: 1.2rem;
+        border: none;
+        background-color: #fff;
+        border-radius: .2rem;
+    }
+}

@@ -1,0 +1,24 @@
+.content {
+    background-color: #1a1b15;
+    min-height: 100vh;
+    // height: 100%;
+    padding: 1rem 0;
+    position: absolute;
+
+    @include celular {
+        padding-top: 2rem;
+        min-width: 100%;
+    }
+
+    @include tablet {
+        min-width: 100%;
+
+    }
+
+    @include desktop {
+        min-width: 50%;
+        width: 50%;
+        right: 0;
+        height: auto;
+    }
+}

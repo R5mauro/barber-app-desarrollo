@@ -1,0 +1,53 @@
+.contenedor-servicios {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-height: 100%;
+    margin: 1rem 0;
+}
+
+.servicio {
+    background-color: $grisClaro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 8rem;
+    border-radius: .2rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all .3s ease;
+
+    p {
+        color: $negro;
+        font-weight: 700;
+        margin: 0;
+        padding: .5rem 1rem;
+
+        @include celular {
+            padding: 0.5rem 0;
+        }
+    }
+
+    .servicio-precio {
+        color: $naranja;
+    }
+}
+
+
+
+.servicio:hover {
+    border-bottom: 2px solid $naranja;
+}
+
+.seleccionado {
+    background-color: $azul;
+
+    p {
+        color: $grisClaro;
+
+    }
+
+    // .servicio-precio {
+    //     color: $negro;
+    // }
+}

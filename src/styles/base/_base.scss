@@ -1,0 +1,25 @@
+.btn {
+    background-color: $azul;
+    border-radius: .2rem;
+    color: $negro;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1rem;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: lighten($azul, 10%);
+    }
+}
+
+.color-blue {
+    color: $azul;
+}
+
+.color-naranja {
+    color: $naranja !important;
+}
+
+.pagina {
+    margin-top: 2rem;
+}

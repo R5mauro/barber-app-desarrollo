@@ -1,0 +1,100 @@
+.hero-container {
+    align-items: center;
+    display: flex;
+    line-height: 0;
+    font-size: 0;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+img,
+picture {
+    object-fit: cover;
+    // object-position: 50%;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    position: fixed;
+
+    @include desktop {
+        width: 50vw;
+    }
+
+}
+
+.heading {
+    position: relative;
+    height: 5rem;
+    overflow: hidden;
+
+    @include desktop {
+        display: none;
+    }
+}
+
+.heading-animation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    animation: heading 6s infinite;
+
+    p {
+        color: #fff;
+        display: block;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 1rem 0;
+        padding: 1.2rem 0;
+    }
+}
+
+#svg-down {
+    position: absolute;
+    content: "";
+    height: 4rem;
+    width: 100%;
+    bottom: 3%;
+    left: 0;
+    animation: svg-down 1s infinite;
+
+    @include desktop {
+        display: none;
+    }
+}
+
+@keyframes svg-down {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-.5rem);
+    }
+
+}
+
+@keyframes heading {
+    0% {
+        transform: translateY(10rem);
+    }
+
+    20%,
+    50% {
+        transform: translateY(0rem);
+    }
+
+    70%,
+    80% {
+        transform: translateY(-5rem);
+    }
+
+    100% {
+        transform: translateY(-10rem);
+
+    }
+}

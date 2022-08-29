@@ -1,0 +1,71 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background: $negro;
+    ;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $naranja;
+    border-radius: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Poppins, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+    color: $azul;
+    margin: 0;
+    padding: 1.5rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    color: #fff;
+    font-size: 2.4rem;
+
+    @include celular {
+        font-size: 2.1rem;
+    }
+}
+
+p {
+    font-size: 1.6rem;
+    color: $grisClaro;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+label {
+    color: $grisClaro;
+}
