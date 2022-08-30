@@ -1,5 +1,5 @@
-# barber-app-desarrollo
-Repositorio de "Barber App" en etapa de desarrollo
+# Barber App
+App Barberia creada con React y TypeScript
 
-## Repositorio de producción
-[Link](https://github.com/R5mauro/barber-app)
+## Demo Live
+[Link](https://barber5.netlify.app/)
