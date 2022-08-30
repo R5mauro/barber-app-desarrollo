@@ -11,8 +11,7 @@ const servicesReducer = (state: any, action: ServicesActionReducer) => {
             } else {
                 // si no existe retornamos el estado actual y le agregados el servicio seleccionado
                 const { id, nombre, precio } = action.payload;
-                const selected = true;
-                return [...state, { id, nombre, precio, selected }]
+                return [...state, { id, nombre, precio, selected: true }]
             }
         case "REMOVE":
             return state.filter((service: ServiceItem) => service.id !== action.payload.id)

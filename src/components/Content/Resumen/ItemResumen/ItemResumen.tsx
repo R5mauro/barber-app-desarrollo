@@ -1,5 +1,3 @@
-import { useContext } from "react"
-import { ServicesContext } from "../../../../context/ServicesContext"
 import { ServiceItem } from "../../../../types/typeApp"
 import { useActionServicio } from "../../../../hooks/useActionServicio";
 
@@ -8,10 +6,6 @@ interface Props {
 }
 const ItemResumen = ({ servicio }: Props) => {
     const { handleClick } = useActionServicio(servicio);
-    // const handleClick = () => {
-    //     console.log(servicio);
-
-    // }
 
     return (
         <div className="item-resumen">

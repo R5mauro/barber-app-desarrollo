@@ -1,5 +1,6 @@
 import { InfoCliente } from "../types/typeApp"
 import { notificacion } from "./notificacion.utility";
+
 export const deshabilitaFechaAnterior = () => {
     const inputFecha = document.getElementById("fecha");
     const fechaActual = new Date();
@@ -7,9 +8,11 @@ export const deshabilitaFechaAnterior = () => {
     const mes = fechaActual.getMonth() + 1;
     const dia = fechaActual.getDate() + 1;
 
-    const fechaDeshabilitar = `${year}-${mes < 10 ? `0${mes}` : mes}-${dia < 10 ? `0${dia}` : dia}`;
+    const fechaDeshabilitarMin = `${year}-${mes < 10 ? `0${mes}` : mes}-${dia < 10 ? `0${dia}` : dia}`;
+    const fechaDeshabilitarMax = `${year + 1}-01-01`;
     if (inputFecha) {
-        (inputFecha as HTMLInputElement).min = fechaDeshabilitar;
+        (inputFecha as HTMLInputElement).min = fechaDeshabilitarMin;
+        (inputFecha as HTMLInputElement).max = fechaDeshabilitarMax;
     }
 }
 
