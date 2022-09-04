@@ -1,12 +1,13 @@
 import { memo } from "react";
 import useFetch from "../../../hooks/useFetch"
+import Loader from "../../Loader/Loader";
 import Servicio from "./Servicio/Servicio";
 
 
 const ServiciosOfrecidos = memo(() => {
     const { servicios, isLoading } = useFetch();
 
-    if (isLoading) return <h1>Cargando...</h1>
+    if (isLoading) return <Loader />
 
     return (
         <>

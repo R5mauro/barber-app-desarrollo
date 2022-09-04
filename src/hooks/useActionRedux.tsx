@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addResumen, ResumenEmptyState } from "../redux/states/resumen.state";
 import { AppStore } from "../redux/store";
-
 import { Resumen } from "../types/typeApp";
 
 export const useActionRedux = () => {
@@ -14,13 +13,15 @@ export const useActionRedux = () => {
 
     useEffect(() => {
         const storageRequest = localStorage.getItem("resumen");
-        if (storageRequest != null) {
+        if (storageRequest !== null && storageRequest !== undefined) {
             const storageResponse = JSON.parse(storageRequest)
-            // console.log(storageResponse);
             setResumen(storageResponse);
             storageResponse.forEach((element: Resumen) => {
                 dispatch(addResumen(element))
             });
+        } else {
+            const emptyArray: Resumen[] = []
+            localStorage.setItem("resumen", JSON.stringify(emptyArray));
         }
     }, [])
 

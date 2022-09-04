@@ -26,8 +26,6 @@ export const useActionServicio = (servicio: ServiceItem) => {
         } else {
             // si no, lo agregamos
             handleAction(servicio, "ADD");
-            console.log("add", servicio);
-
         }
     }
     return { handleClick, isSelected }

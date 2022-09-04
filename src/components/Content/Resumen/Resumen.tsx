@@ -1,6 +1,5 @@
 import { memo, useContext } from 'react'
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { ClienteContext } from '../../../context/ClienteContext';
 import { ServicesContext } from '../../../context/ServicesContext'
 import { useActionRedux } from '../../../hooks/useActionRedux';

@@ -8,7 +8,7 @@ import ItemCarrito from "./ItemCarrito/ItemCarrito";
 const Carrito = () => {
     const resumen = useActionRedux()
     return (
-        <div className="page carrito">
+        <div className="page centered-content carrito">
             {
                 resumen.length < 1
                     ? <>

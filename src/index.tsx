@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import Loader from './components/Loader/Loader';
 const Carrito = lazy(() => import("./components/Carrito/Carrito"));
 
 const root = ReactDOM.createRoot(
@@ -17,7 +18,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<Loader />}>
       <BrowserRouter>
         <Provider store={store}>
           <Routes>
