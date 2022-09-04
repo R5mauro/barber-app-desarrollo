@@ -46,11 +46,17 @@ h2 {
 
 h3 {
     color: #fff;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
 
     @include celular {
         font-size: 2.1rem;
     }
+}
+
+h4 {
+    color: #fff;
+    font-size: 2rem;
+
 }
 
 p {
@@ -60,6 +66,7 @@ p {
 
 a {
     text-decoration: none;
+    color: $negro;
 }
 
 button {

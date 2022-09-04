@@ -1,4 +1,4 @@
-import { InfoCliente } from "../types/typeApp"
+import { Cliente } from "../types/typeApp"
 import { notificacion } from "./notificacion.utility";
 
 export const deshabilitaFechaAnterior = () => {
@@ -17,7 +17,7 @@ export const deshabilitaFechaAnterior = () => {
 }
 
 
-export const validarForm = ({ nombre, fecha, hora }: InfoCliente) => {
+export const validarForm = ({ nombre, fecha, hora }: Cliente) => {
     if ((nombre !== "" && fecha !== "" && hora !== "")) {
         // validar nombre mayor que 3 letras
         if (nombre.length < 3) { notificacion("Ingrese un nombre correcta", "error"); return false };

@@ -12,12 +12,16 @@
     }
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .color-blue {
     color: $azul;
 }
 
 .color-naranja {
-    color: $naranja !important;
+    color: $naranja  !important;
 }
 
 .pagina {

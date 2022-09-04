@@ -1,6 +1,6 @@
 import { createContext, useReducer } from "react";
 import clienteReducer from "../reducer/clienteReducer";
-import { ClienteActionReducer, InfoCliente } from "../types/typeApp";
+import { ClienteActionReducer, Cliente } from "../types/typeApp";
 
 const initialState = {
     cliente: [],
@@ -9,7 +9,7 @@ const initialState = {
 
 
 interface ClienteContextType {
-    cliente: InfoCliente[],
+    cliente: Cliente[],
     dispatch: React.Dispatch<ClienteActionReducer>
 }
 export const ClienteContext = createContext<ClienteContextType>(initialState);

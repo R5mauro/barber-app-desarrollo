@@ -1,13 +1,23 @@
 import { memo, useContext } from 'react'
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ClienteContext } from '../../../context/ClienteContext';
 import { ServicesContext } from '../../../context/ServicesContext'
+import { useActionRedux } from '../../../hooks/useActionRedux';
+import { addResumen } from '../../../redux/states/resumen.state';
+import { notificacion } from '../../../utilities/notificacion.utility';
 import ItemCliente from './ItemCliente/ItemCliente';
 import ItemResumen from './ItemResumen/ItemResumen';
 
 const Resumen = memo(() => {
     const { servicios } = useContext(ServicesContext);
     const { cliente } = useContext(ClienteContext)
+    const dispatch = useDispatch()
+    useActionRedux();
+
+
+
+
     let resultado: number = 0;
     return (
         <div id='3' className='resumen pagina'>
@@ -32,7 +42,13 @@ const Resumen = memo(() => {
                             return true;
                         })
                     }<span className='color-blue'>{`$${resultado}`}</span></p>
-                    {/* <Link to="/ticket" className='btn'>Generar Ticket</Link> */}
+                    <button className='btn' onClick={
+                        () => {
+                            dispatch(addResumen(
+                                { serviciosSeleccionados: servicios, cliente }
+                            ))
+                            notificacion("Resumen guardado correctamente", "success")
+                        }}>Finalizar y Guardar</button>
                 </div>
             }
         </div>

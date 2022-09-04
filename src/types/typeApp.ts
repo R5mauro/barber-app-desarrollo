@@ -11,14 +11,14 @@ export interface ServiceFetch {
     isError: boolean
 }
 
-export interface InfoCliente {
+export interface Cliente {
     nombre: string,
     fecha: string,
     hora: string
 }
 export interface Resumen {
     serviciosSeleccionados: ServiceItem[],
-    infoCliente: InfoCliente
+    cliente: Cliente
 }
 
 export interface ServicesActionReducer {

@@ -3,7 +3,7 @@ import Header from "./Header/Header"
 
 const Content = () => {
     return (
-        <div className="content" id="content">
+        <div className="content page" id="content">
             <Header />
         </div>
     )
